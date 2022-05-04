@@ -1,0 +1,25 @@
+@media screen and (min-width:1250px) {
+    .card{
+        width:1110px;
+        height:455px;
+        display:flex;
+        flex-direction:row-reverse;
+        gap:0px;
+    }
+    .image{
+        width:50%;
+        height:50%;
+        background: linear-gradient(0deg, rgba(110, 10, 160, 0.5),
+        rgba(110, 10, 160, 0.5)), url("../images/image-header-mobile.jpg");
+    }
+    .image:first-of-type{
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    .section-text{
+        width:50%;
+        height:100%;
+        
+    }
+
+}

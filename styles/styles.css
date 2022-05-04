@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
 :root{
   --BG-color:hsl(233, 47%, 7%);
   --card-color:hsl(244, 38%, 16%);
-  --IMG-color:hsl(277, 64%, 61%)
+  --IMG-color:hsl(277, 64%, 61%);
+  --font-text:'Inter';
+  --font-stat:'Lexend Decard';
 }
 
 body{
     background-color:var(--BG-color);
     font-size:15px;
 }
-
+/**************MAIN CARD************/
 #card{
     background-color:var(--card-color);
     border-radius:10px;
@@ -21,7 +23,7 @@ body{
     left:50%;
     transform:translate(-50%,-50%);
 }
-
+/**********IMAGE*************/
 #image{
 width:100%;
 height:240px;
@@ -32,4 +34,69 @@ background-size:cover;
 
 #image:first-of-type{
     border-radius:10px 10px 0px 0px;
+}
+/*********TEXT***********/
+#section-text{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    padding:0 30px;
+    gap:5px;
+
+}
+h1{
+
+font-family:var(--font-text);
+color:white;
+font-weight:700;
+font-size:30px;
+}
+h1 .highlighted_word{
+    color:hsl(277, 64%, 61%);
+}
+#section-text p{
+    margin-top:-10px;
+    font-family:var(--font-text);
+    color:hsla(0, 0%, 100%, 0.6);
+    font-weight:100;
+    font-size:13px;
+    line-height:1.5;
+    letter-spacing:1.1px;
+}
+/******STAT BOX*****/
+#stat-box{
+    font-family:var(--font-stat);
+    margin-top:20px;
+    padding-bottom:25px; /*gap btw last element & border*/
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    
+   
+}
+#stat-box .num{
+    font-size:25px;
+    color:white;
+    font-weight:bold;
+    margin-bottom:10px;
+
+    
+}
+
+#stat-box .cap{
+     color:hsla(0, 0%, 100%, 0.6);
+     font-weight:100;
+     letter-spacing:1.5px;
+     padding-bottom:15px;
+
+}
+/*******FOOTER*******/
+.attribution{
+    font-family:var(--font-text);
+    color:white;
+    text-align: center;
+}
+
+footer a{
+    color:var(--card-color);
 }
