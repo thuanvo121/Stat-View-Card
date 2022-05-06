@@ -21,14 +21,12 @@ body{
 #card{
     background-color:var(--card-color);
     border-radius:10px;
-    width:330px;
-    height:min-content;
 
 }
 /**********IMAGE*************/
 #image{
 width:100%;
-height:240px;
+min-height:auto;
 background-image:linear-gradient(0deg,rgba(110, 10, 160, 0.5),rgba(110, 10, 160, 0.5)),url("../images/image-header-mobile.jpg");
 background-position:center center;
 background-size:cover;
@@ -42,7 +40,7 @@ background-size:cover;
     display:flex;
     flex-direction:column;
     text-align:center;
-    padding:0 30px;
+    padding:2rem;
     gap:5px;
 
 }
@@ -52,6 +50,7 @@ font-family:var(--font-text);
 color:white;
 font-weight:700;
 font-size:30px;
+margin-top:0;
 }
 h1 .highlighted_word{
     color:hsl(277, 64%, 61%);
@@ -69,7 +68,6 @@ h1 .highlighted_word{
 #stat-box{
     font-family:var(--font-stat);
     margin-top:20px;
-    padding-bottom:25px; /*gap btw last element & border*/
     display:flex;
     flex-direction:column;
     gap:14px;
@@ -108,17 +106,17 @@ footer a{
     color:hsl(277, 64%, 61%);
 }
 
-@media screen and (min-width:1250px){
+@media screen and (min-width:1024px){
     main{
         display:flex;
         flex-direction:row-reverse;
-        min-width:1110px;
-        height:455px;
+        max-width: 70rem;
+        align-items: stretch;
 
     }
     #image{
         width:50%;
-        height:455px;
+        min-height:100%;
         background-image:linear-gradient(0deg,rgba(110, 10, 160, 0.5),rgba(110, 10, 160, 0.5)),url("../images/image-header-desktop.jpg");
         background-size:cover;
 
@@ -126,11 +124,9 @@ footer a{
     
     #section-text{
         width:50%;
-        justify-content:center;
         text-align: left;
-        position:relative;
         left: 50px;
-        margin-right: 50px;
+        flex:1;
     }
     h1{
         width:80%;
@@ -144,11 +140,6 @@ footer a{
     font-size:20px;
 }
     #stat-box{
-    
-        position:relative;
-        width:80%;
-        top:25px;
-        text-align: left;
         flex-direction:row;
         align-items: center;
         justify-content: flex-start;
